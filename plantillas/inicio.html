@@ -1,0 +1,11 @@
+<!-- plantillas/inicio.html-->
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for pub in object_list %}
+    <div class="entrada_publicacion">
+        <h2><a href="{% url 'detalle_pub' pub.pk %}">  {{ pub.titulo }} </a>
+        <p> {{ pub.cuerpo }} </p></h2>
+    </div>
+    {% endfor %} 
+{% endblock content %} 

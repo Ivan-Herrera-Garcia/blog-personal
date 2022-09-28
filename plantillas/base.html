@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blog de Django</title>
+        <link rel = "stylesheet" href="{% static '/css/base.css' %}">
+        <link href="https://fonst.googleapis.com/css?family=Source+Sans+Pro:400" rel="stylesheet">
+
+    </head>
+    <div>
+    <body class="gradient">
+        
+        <header>
+            <div class="nav-left">
+            <h1><a href = "{% url 'inicio' %}">Blog en Django</a></h1>
+            </div>
+            <div class = "nav-right"><a href = "{% url 'nueva_publicacion' %}">Nueva entrada de blog</a>
+            </div>
+        </header>
+             {% if user.is_authenticated %}
+             <p>Hola {{ user.username }} </p>
+             <p><a href="{% url 'logout' %}">Salir (Cerrar sesión)</a></p>
+             {% else %}
+             <p>No ha iniciado sesión.</p>
+             <a href="{% url 'login' %}">Iniciar sesión</a><br>
+             <a href="{% url 'registro' %}">Registro</a>
+             {% endif %}
+             {% block content %}
+             {% endblock content %}
+        </div>
+    </body>
+</html>

@@ -1,0 +1,115 @@
+/* estatocps/css/base.css */
+body {
+    background-color: darkcyan;
+}
+
+.gradient {
+    padding: 10rem;
+    margin: 7rem;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #9581F4, #23a6d5, #23d5ab);
+    background-size: 400%;
+    animation: gradient 2s ease infinite;
+    border-radius: 300px;
+    box-shadow: 0px 0px 20px black;
+    
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/*.enlace a {
+    text-decoration: none;
+    background-color: black;
+    color:rgb(0, 0, 0);
+    pointer-events: none;
+    cursor: default;
+    box-shadow: none;
+}*/
+
+header h1 a {
+    color: red;
+    text-decoration: none;
+    box-shadow: none;
+    
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    
+}
+
+header {
+    border-bottom: 1px solid #999;
+    margin-bottom: 2rem;
+    display: flex;
+
+}
+
+.nav-left {
+    margin-right: auto;
+}
+
+.nav-right {
+    display : flex;
+    padding-top: 2rem;
+    border: 10cm;
+}
+
+
+.entrada-publicacion {
+    margin-bottom: 2rem;
+}
+
+.entrada-publicacion h2 {
+    margin: 0.5rem 0;
+}
+
+.entrada-publicacion h2 a, 
+.entrada-publicacion h2 a :visited {
+    color: rgb(0, 0, 0);
+    text-decoration:none;
+    background-color: rgb(0, 0, 0);
+    text-shadow: none;
+    text-decoration-thickness: 0px;
+    
+}
+
+.entrada-publicacion p {
+    margin : 0px;
+    font-weight: 400;
+}
+
+.entrada-publicacion h2 a:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-shadow: none;
+}
+
+a:link {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+a:visited {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+}
+a:hover {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+}
+a:active {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+}

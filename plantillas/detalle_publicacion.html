@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="entrada-publicacion">
+        <h2>{{ publicacion.titulo }}</h2>
+        <p>{{ publicacion.cuerpo }}</p>
+    </div>
+    <p><a href="{% url 'editar_publicaciones' publicacion.pk %}">Editar publicacion</a>
+    <a href="{% url 'eliminar_publicacion' publicacion.pk %}">Eliminar publicacion</a>
+    </p>
+{% endblock content %}
